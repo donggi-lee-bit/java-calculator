@@ -6,6 +6,12 @@ import java.math.RoundingMode;
 public class Calculator {
 
     public BigDecimal add(final BigDecimal num1, final BigDecimal num2) {
-        return num1.add(num2).setScale(1, RoundingMode.HALF_UP);
+        return num1.add(num2)
+            .setScale(1, RoundingMode.HALF_UP);
+    }
+
+    public BigDecimal subtract(final BigDecimal num1, final BigDecimal num2) {
+        return num1.subtract(num2)
+            .setScale(1, RoundingMode.HALF_UP);
     }
 }
