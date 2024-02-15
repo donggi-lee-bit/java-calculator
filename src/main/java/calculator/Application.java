@@ -1,8 +1,15 @@
 package calculator;
 
+import calculator.controller.validation.CalculationValidator;
+import calculator.controller.view.InputView;
+
 public class Application {
 
     public static void main(String[] args){
-        System.out.println("Hello World!!!");
+        InputView inputView = new InputView(new CalculationValidator());
+
+        while (true) {
+            String[] expression = inputView.readCalculationExpression();
+        }
     }
 }
