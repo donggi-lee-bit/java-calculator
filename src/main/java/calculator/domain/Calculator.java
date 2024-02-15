@@ -14,4 +14,9 @@ public class Calculator {
         return num1.subtract(num2)
             .setScale(1, RoundingMode.HALF_UP);
     }
+
+    public BigDecimal multiply(final BigDecimal num1, final BigDecimal num2) {
+        return num1.multiply(num2)
+            .setScale(1, RoundingMode.HALF_UP);
+    }
 }
