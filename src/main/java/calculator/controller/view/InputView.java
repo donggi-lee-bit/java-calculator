@@ -16,7 +16,7 @@ public class InputView {
     }
 
     public String[] readCalculationExpression() {
-        System.out.println("\n 계산할 식을 입력해주세요 (e. g. 10 + 10). 종료하려면 'q'를 입력하세요: ");
+        System.out.println("\n계산할 식을 입력해주세요 (e. g. 10 + 10). 종료하려면 'q'를 입력하세요: ");
         String input = scanner.nextLine().trim();
 
         if (EXIT_COMMAND.equalsIgnoreCase(input)) {
