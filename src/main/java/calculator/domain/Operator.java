@@ -1,7 +1,6 @@
 package calculator.domain;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 public enum Operator {
     ADD("+") {
@@ -19,7 +18,7 @@ public enum Operator {
     MULTIPLY("*") {
         @Override
         public BigDecimal apply(BigDecimal operand1, BigDecimal operand2) {
-            return operand1.multiply(operand2).setScale(1, RoundingMode.HALF_UP);
+            return operand1.multiply(operand2);
         }
     },
     DIVIDE("/") {
@@ -29,7 +28,7 @@ public enum Operator {
             if (BigDecimal.ZERO.equals(operand2)) {
                 throw new ArithmeticException("0으로 나눌 수 없습니다.");
             }
-            return operand1.divide(operand2, 1, RoundingMode.HALF_UP);
+            return operand1.divide(operand2);
         }
     };
 
